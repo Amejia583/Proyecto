@@ -1,0 +1,81 @@
+package com.example.nas;
+
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class registropadre extends AppCompatActivity {
+    SQLiteDatabase.CursorFactory factory;
+    String id_usuario;
+
+    private EditText ed_Nombre, ed_Cedula, ed_Telefono, ed_Direccion, ed_Correo, ed_Contrasena;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_registropadre);
+
+        ed_Nombre=(EditText)findViewById(R.id.txtNombre2);
+        ed_Cedula=(EditText)findViewById(R.id.txtCedula);
+        ed_Telefono=(EditText)findViewById(R.id.txtTelefono);
+        ed_Direccion=(EditText)findViewById(R.id.txtDireccion);
+        ed_Correo=(EditText)findViewById(R.id.txtCorreo2);
+        ed_Contrasena=(EditText)findViewById(R.id.txtContraseña2);
+    }
+
+    //metodo para dar de alta a los productos
+    public void Registrar(View view){
+        try {
+            registroSQLite reg = new registroSQLite(this);
+            SQLiteDatabase registroSQLite= reg.getWritableDatabase();
+
+            String Nombre=ed_Nombre.getText().toString();
+            String Cedula=ed_Cedula.getText().toString();
+            String Telefono=ed_Telefono.getText().toString();
+            String Direccion=ed_Direccion.getText().toString();
+            String Correo=ed_Correo.getText().toString();
+            String Contrasena=ed_Contrasena.getText().toString();
+
+            if(!Nombre.isEmpty() && !Cedula.isEmpty() && !Telefono.isEmpty() && !Direccion.isEmpty() && !Correo.isEmpty() && !Contrasena.isEmpty() ){
+                ContentValues registro=new ContentValues();
+                registro.put("Nombre", Nombre);
+                registro.put("Cedula", Cedula);
+                registro.put("Telefono", Telefono);
+                registro.put("Direccion", Direccion);
+                registro.put("Correo", Correo);
+                registro.put("Contrasena", Contrasena);
+
+                registroSQLite.insert("usuarios", null, registro);
+                registroSQLite.close();
+
+                ed_Nombre.setText("");
+                ed_Cedula.setText("");
+                ed_Telefono.setText("");
+                ed_Direccion.setText("");
+                ed_Correo.setText("");
+                ed_Contrasena.setText("");
+
+                String correString = "Registro exitoso";
+                Toast.makeText(getApplicationContext(), correString, Toast.LENGTH_SHORT).show();
+
+            }else{
+                String errorString = "Debe llenar todos los campos";
+                Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+            }
+
+        }catch (Exception e){
+            System.err.print("Error"+e);
+        }
+    }
+
+    public void atras(View view){
+        Intent atras =new Intent(this, registro.class );
+        startActivity(atras);
+    }
+}
+
