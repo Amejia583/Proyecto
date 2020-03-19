@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/txtContraseñaR"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CambiarpadreFragment">
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCambiar"
         android:layout_width="220dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="60dp"
-        android:textColor="#fff"
+        android:layout_marginBottom="156dp"
         android:background="#00BCD4"
-        android:text="Button"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="497dp" />
+        android:text="@string/btnCambiar"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtContraseña"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/txtContraseña"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/txtContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtContraseña"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/txtContraseñaR"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/txtReperitC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtReperitC"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="112dp"
+        android:ems="10"
+        android:hint="@string/txtReperitC"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/btnCambiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/txtContraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
 </android.support.constraint.ConstraintLayout>

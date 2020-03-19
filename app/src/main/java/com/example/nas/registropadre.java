@@ -63,6 +63,9 @@ public class registropadre extends AppCompatActivity {
                 String correString = "Registro exitoso";
                 Toast.makeText(getApplicationContext(), correString, Toast.LENGTH_SHORT).show();
 
+                Intent siguiente =new Intent(this, MainActivity.class );
+                startActivity(siguiente);
+
             }else{
                 String errorString = "Debe llenar todos los campos";
                 Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();

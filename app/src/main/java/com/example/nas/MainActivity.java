@@ -33,6 +33,9 @@ public class MainActivity extends registro {
                 if (nas.validar(Correo,Contrasena)){
                     Intent atras =new Intent(this, padre.class );
                     startActivity(atras);
+
+                    ed_Correo.setText("");
+                    ed_Contrasena.setText("");
                 }else{
                     Toast.makeText(this,"El usuario o contraseña son incorrectos",Toast.LENGTH_SHORT).show();
                 }

@@ -45,23 +45,33 @@
     <string name="menu_gallery">Editar información</string>
     <string name="menu_slideshow">Cerrar Sesión</string>
     <string name="home_second">Home Second</string>
-
     <string name="btnSolicitar">solicitar niñera</string>
     <string name="btnReservar">Reservar niñera</string>
 
+    //actualizar padre
     <string name="actualizarpadre">Actualizar información</string>
     <string name="txtTelefono3">Telefono </string>
     <string name="txtCorreo4">Correo</string>
     <string name="txtDireccion3">Dirección</string>
     <string name="btnActualizarpadre">Actualizar</string>
 
-    //reservar
+    //reservar padre
     <string name="txtPrecio">Precio sugerido</string>
     <string name="txtNiños">Número de niños</string>
     <string name="txtNiñera">Nombre de la niñera</string>
+    <string name="txtFecha">Fecha</string>
+    <string name="txtHora">Hora</string>
     <string name="btnReservar2">Reservar</string>
 
+    //cambiar contraseña padre
+    <string name="txtContraseña">Precio sugerido</string>
+    <string name="txtContraseñaR">Número de niños</string>
+    <string name="txtReperitC">Nombre de la niñera</string>
+    <string name="btnCambiar">Aceptar</string>
+
     <string name="cambiarpadre">Cambiar contraseña</string>
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

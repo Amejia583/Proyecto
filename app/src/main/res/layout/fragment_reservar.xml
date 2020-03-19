@@ -9,38 +9,41 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="Nombre de la niñera"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecio"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtPrecio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="@string/txtPrecio"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/txtNiños"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtNiños"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="@string/txtNiños"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btnReservar2"
+        app:layout_constraintBottom_toTopOf="@+id/txtFecha"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -57,12 +60,38 @@
         android:id="@+id/btnReservar2"
         android:layout_width="220dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="96dp"
         android:background="#00BCD4"
         android:text="@string/btnReservar2"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtFecha"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="@string/txtFecha"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/txtHora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtHora"
+        android:layout_width="294dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="@string/txtHora"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/btnReservar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
