@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:ems="10"
+        android:hint="Nombre de la niñera"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,7 +35,7 @@
         android:id="@+id/txtNiños"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="52dp"
         android:ems="10"
         android:hint="@string/txtNiños"
         android:inputType="number"
@@ -55,13 +55,14 @@
 
     <Button
         android:id="@+id/btnReservar2"
-        android:layout_width="231dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="220dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="148dp"
         android:background="#00BCD4"
         android:text="@string/btnReservar2"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
