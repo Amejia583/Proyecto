@@ -3,11 +3,14 @@ package com.example.nas;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class registropadre extends AppCompatActivity {
     SQLiteDatabase.CursorFactory factory;
@@ -41,35 +44,50 @@ public class registropadre extends AppCompatActivity {
             String Correo=ed_Correo.getText().toString();
             String Contrasena=ed_Contrasena.getText().toString();
 
-            if(!Nombre.isEmpty() && !Cedula.isEmpty() && !Telefono.isEmpty() && !Direccion.isEmpty() && !Correo.isEmpty() && !Contrasena.isEmpty() ){
-                ContentValues registro=new ContentValues();
-                registro.put("Nombre", Nombre);
-                registro.put("Cedula", Cedula);
-                registro.put("Telefono", Telefono);
-                registro.put("Direccion", Direccion);
-                registro.put("Correo", Correo);
-                registro.put("Contrasena", Contrasena);
+            Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                    + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+            String email = Correo;
 
-                registroSQLite.insert("usuarios", null, registro);
-                registroSQLite.close();
+            Matcher mather = pattern.matcher(email);
 
-                ed_Nombre.setText("");
-                ed_Cedula.setText("");
-                ed_Telefono.setText("");
-                ed_Direccion.setText("");
-                ed_Correo.setText("");
-                ed_Contrasena.setText("");
+            if (mather.find() == true) {
+                if(!Nombre.isEmpty() && !Cedula.isEmpty() && !Telefono.isEmpty() && !Direccion.isEmpty() && !Correo.isEmpty() && !Contrasena.isEmpty() ){
 
-                String correString = "Registro exitoso";
-                Toast.makeText(getApplicationContext(), correString, Toast.LENGTH_SHORT).show();
 
-                Intent siguiente =new Intent(this, MainActivity.class );
-                startActivity(siguiente);
+                    ContentValues registro=new ContentValues();
+                    registro.put("Nombre", Nombre);
+                    registro.put("Cedula", Cedula);
+                    registro.put("Telefono", Telefono);
+                    registro.put("Direccion", Direccion);
+                    registro.put("Correo", Correo);
+                    registro.put("Contrasena", Contrasena);
 
-            }else{
-                String errorString = "Debe llenar todos los campos";
+                    registroSQLite.insert("usuarios", null, registro);
+                    registroSQLite.close();
+
+                    ed_Nombre.setText("");
+                    ed_Cedula.setText("");
+                    ed_Telefono.setText("");
+                    ed_Direccion.setText("");
+                    ed_Correo.setText("");
+                    ed_Contrasena.setText("");
+
+                    String correString = "Registro exitoso";
+                    Toast.makeText(getApplicationContext(), correString, Toast.LENGTH_SHORT).show();
+
+                    Intent siguiente =new Intent(this, MainActivity.class );
+                    startActivity(siguiente);
+
+                }else{
+                    String errorString = "Debe llenar todos los campos";
+                    Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                String errorString = "Debe tenero un @ un . y sin espacios";
                 Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
             }
+
+
 
         }catch (Exception e){
             System.err.print("Error"+e);

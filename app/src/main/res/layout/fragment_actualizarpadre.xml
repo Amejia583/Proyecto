@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:id="@+id/txtTelefono3"
         android:layout_width="294dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="@string/txtTelefono3"
         android:inputType="textPersonName"
@@ -36,7 +36,7 @@
         android:id="@+id/txtCorreo4"
         android:layout_width="294dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="@string/txtCorreo4"
         android:inputType="textPersonName"
@@ -49,7 +49,7 @@
         android:id="@+id/txtDireccion3"
         android:layout_width="294dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="172dp"
         android:ems="10"
         android:hint="@string/txtDireccion3"
         android:inputType="textPersonName"
@@ -67,4 +67,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

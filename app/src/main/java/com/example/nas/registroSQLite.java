@@ -23,6 +23,7 @@ public class registroSQLite extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase nas) {
         nas.execSQL("create table usuarios(id_usuario integer primary key AUTOINCREMENT,Nombre text,Cedula int," +
                 "Telefono int,Direccion text,Correo text,Contrasena text)");
+        nas.execSQL("insert into usuarios(Correo,Contrasena) values ('andreatehortua613@gmal.com','123')");
     }
 
     @Override

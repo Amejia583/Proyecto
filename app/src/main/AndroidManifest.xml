@@ -9,10 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".mapa"></activity>
+        <activity
+            android:name=".admin"
+            android:label="@string/title_activity_admin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ninera"
+            android:label="@string/title_activity_ninera"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".padre"
             android:label="@string/title_activity_padre"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".registro" />
         <activity android:name=".registropadre" />
         <activity android:name=".MainActivity">

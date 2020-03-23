@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation1">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation1"
+    android:label="string"
+    app:startDestination="@id/nav_home1">
 
+
+    <fragment
+        android:id="@+id/nav_home1"
+        android:name="com.example.nas.nav_home1"
+        android:label="@string/lblInicio"
+        tools:layout="@layout/fragment_nav_home1" />
+    <fragment
+        android:id="@+id/nav_galery1"
+        android:name="com.example.nas.nav_galery1"
+        android:label="@string/lblEditar"
+        tools:layout="@layout/fragment_nav_galery1">
+        <action
+            android:id="@+id/action_nav_galery1_to_actualizarnineraFragment"
+            app:destination="@id/actualizarnineraFragment" />
+        <action
+            android:id="@+id/action_nav_galery1_to_cambiarnineraFragment"
+            app:destination="@id/cambiarnineraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actualizarnineraFragment"
+        android:name="com.example.nas.actualizarnineraFragment"
+        android:label="@string/lblActualizar"
+        tools:layout="@layout/fragment_actualizarninera" />
+    <fragment
+        android:id="@+id/cambiarnineraFragment"
+        android:name="com.example.nas.cambiarnineraFragment"
+        android:label="@string/lblCambiar"
+        tools:layout="@layout/fragment_cambiarninera" />
 </navigation>

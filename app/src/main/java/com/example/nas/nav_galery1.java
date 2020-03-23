@@ -1,26 +1,42 @@
 package com.example.nas;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.nas.ui.gallery.GalleryViewModel;
+
+import static androidx.navigation.Navigation.findNavController;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class nav_galery1 extends Fragment {
 
-    public nav_galery1() {
-        // Required empty public constructor
-    }
-
+    private GalleryViewModel galleryViewModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_galery1, container, false);
+        View vista= inflater.inflate(R.layout.fragment_nav_galery1, container, false);
+        Button actualizarninera=vista.findViewById(R.id.btnActualizarninera1);
+        Button cambiarninera=vista.findViewById(R.id.btnCambiarninera);
+
+        actualizarninera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findNavController(v).navigate(R.id.actualizarnineraFragment);
+            }
+        });
+        cambiarninera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findNavController(v).navigate(R.id.cambiarnineraFragment);
+            }
+        });
+
+
+        return vista;
     }
 }

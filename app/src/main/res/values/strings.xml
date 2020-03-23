@@ -31,6 +31,8 @@
     <string name="txtContraseña3">Contraseña</string>
     <string name="btnSiguiente3">Siguiente</string>
     <string name="btnAtras3">Atrás</string>
+
+    //menú padre
     <string name="title_activity_padre">padre</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -39,13 +41,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-
-    //padre
     <string name="menu_home">Inicio</string>
     <string name="menu_gallery">Editar información</string>
     <string name="menu_slideshow">Cerrar Sesión</string>
+    <string name="lblmapa">Mapa</string>
     <string name="home_second">Home Second</string>
-    <string name="btnSolicitar">solicitar niñera</string>
+    <string name="btnSolicitar">Solicitar niñera</string>
     <string name="btnReservar">Reservar niñera</string>
 
     //actualizar padre
@@ -53,7 +54,7 @@
     <string name="txtTelefono3">Telefono </string>
     <string name="txtCorreo4">Correo</string>
     <string name="txtDireccion3">Dirección</string>
-    <string name="btnActualizarpadre">Actualizar</string>
+    <string name="btnActualizarpadre">Aceptar</string>
 
     //reservar padre
     <string name="txtPrecio">Precio sugerido</string>
@@ -61,19 +62,43 @@
     <string name="txtNiñera">Nombre de la niñera</string>
     <string name="txtFecha">Fecha</string>
     <string name="txtHora">Hora</string>
-    <string name="btnReservar2">Reservar</string>
+    <string name="btnReservar2">Aceptar</string>
 
     //cambiar contraseña padre
-    <string name="txtContraseña">Precio sugerido</string>
-    <string name="txtContraseñaR">Número de niños</string>
-    <string name="txtReperitC">Nombre de la niñera</string>
+    <string name="txtContraseña">Contraseña actual</string>
+    <string name="txtContraseñaR">Nueva contraseña</string>
+    <string name="txtReperitC">Confirmar contraseña</string>
     <string name="btnCambiar">Aceptar</string>
-
     <string name="cambiarpadre">Cambiar contraseña</string>
 
+    //niñera
+    <string name="lblEditar">Editar información</string>
+    <string name="lblInicio">Nas</string>
+    <string name="lblActualizar">Actualizar información</string>
+    <string name="lblCambiar">Cambiar contraseña</string>
 
+    <string name="btnActualizarninera1">Actualizar información</string>
+    <string name="btnCambiarninera">Cambiar contraseña</string>
+
+    //actualizar información
+    <string name="txtTelefono4">Telefono </string>
+    <string name="txtCorreo5">Correo</string>
+    <string name="txtDireccion4">Dirección</string>
+    <string name="btnActualizarninera">Aceptar</string>
+
+    //cambiar contraseña niñera
+    <string name="txtContraseña4">Contraseña actual</string>
+    <string name="txtContraseñaR1">Nueva contraseña</string>
+    <string name="txtRepetir">Confirmar contraseña</string>
+    <string name="btnCambiarninera1">Aceptar</string>
+
+    //admin
+    <string name="lblInicio1">Nas</string>
+    <string name="lblUsuarios">Usuarios registrados</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_ninera">ninera</string>
+    <string name="title_activity_admin">admin</string>
 </resources>

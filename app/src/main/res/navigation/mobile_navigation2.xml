@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation2">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    android:label="string"
+    app:startDestination="@id/nav_home2">
 
+    <fragment
+        android:id="@+id/nav_home2"
+        android:name="com.example.nas.nav_home2"
+        android:label="@string/lblInicio1"
+        tools:layout="@layout/fragment_nav_home2" />
+    <fragment
+        android:id="@+id/nav_galery2"
+        android:name="com.example.nas.nav_galery2"
+        android:label="@string/lblUsuarios"
+        tools:layout="@layout/fragment_nav_galery2" />
 </navigation>

@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_nav_home_to_reservarFragment"
             app:destination="@id/reservarFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_mapaFragment"
+            app:destination="@id/mapaFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
@@ -60,4 +63,9 @@
         android:name="com.example.nas.ReservarFragment"
         android:label="@string/btnReservar"
         tools:layout="@layout/fragment_reservar" />
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="com.example.nas.mapaFragment"
+        android:label="@string/lblmapa"
+        tools:layout="@layout/fragment_mapa" />
 </navigation>

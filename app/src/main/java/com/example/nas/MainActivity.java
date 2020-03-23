@@ -2,7 +2,7 @@ package com.example.nas;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,20 +29,27 @@ public class MainActivity extends registro {
             String Correo=ed_Correo.getText().toString();
             String Contrasena=ed_Contrasena.getText().toString();
 
-            if(!Correo.isEmpty() && !Contrasena.isEmpty() ){
-                if (nas.validar(Correo,Contrasena)){
-                    Intent atras =new Intent(this, padre.class );
-                    startActivity(atras);
+            if(Correo=="andreatehortua613@gmail.com" && Contrasena=="123"){
 
-                    ed_Correo.setText("");
-                    ed_Contrasena.setText("");
-                }else{
-                    Toast.makeText(this,"El usuario o contraseña son incorrectos",Toast.LENGTH_SHORT).show();
-                }
             }else{
-                String errorString = "Debe llenar todos los campos";
-                Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+                if(!Correo.isEmpty() && !Contrasena.isEmpty() ){
+                    if (nas.validar(Correo,Contrasena)){
+                        Intent atras =new Intent(this, padre.class );
+                        startActivity(atras);
+
+                         ed_Correo.setText("");
+                        ed_Contrasena.setText("");
+                    }else{
+                        Toast.makeText(this,"El usuario o contraseña son incorrectos",Toast.LENGTH_SHORT).show();
+                    }
+                }else{
+                    String errorString = "Debe llenar todos los campos";
+                    Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+                }
+
             }
+
+
         }catch (Exception e){
             System.err.print("Error"+e);
         }
