@@ -1,7 +1,9 @@
 package com.example.nas;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +12,9 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ActualizarpadreFragment extends Fragment {
+public class solicitudes extends Fragment {
 
-    public ActualizarpadreFragment() {
+    public solicitudes() {
         // Required empty public constructor
     }
 
@@ -21,6 +23,6 @@ public class ActualizarpadreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_actualizarpadre, container, false);
+        return inflater.inflate(R.layout.fragment_solicitudes, container, false);
     }
 }
