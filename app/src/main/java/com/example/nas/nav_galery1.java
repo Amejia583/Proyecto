@@ -26,7 +26,7 @@ public class nav_galery1 extends Fragment {
         actualizarninera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findNavController(v).navigate(R.id.actualizarnineraFragment);
+                findNavController(v).navigate(R.id.actualizarninera);
             }
         });
         cambiarninera.setOnClickListener(new View.OnClickListener() {

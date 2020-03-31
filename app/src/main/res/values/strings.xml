@@ -23,13 +23,13 @@
     <string name="consu">consu</string>
 
     //registro niñera
-    <string name="txtNombre3">Nombre</string>
+    <string name="txtNombre1">Nombre</string>
     <string name="txtDireccion2">Dirección</string>
     <string name="txtCedula2">Cédula</string>
     <string name="txtTelefono2">Teléfono</string>
     <string name="txtCorreo3">Correo</string>
     <string name="txtContraseña3">Contraseña</string>
-    <string name="btnSiguiente3">Siguiente</string>
+    <string name="btnSiguiente3">Registrar</string>
     <string name="btnAtras3">Atrás</string>
 
     //menú padre
@@ -48,13 +48,28 @@
     <string name="home_second">Home Second</string>
     <string name="btnSolicitar">Solicitar niñera</string>
     <string name="btnReservar">Reservar niñera</string>
+    <string name="lblsolicitar">Solicitar niñera</string>
+    <string name="lblterminos">Terminos y condiciones</string>
+    <string name="lblterminos2">Terminos y condiciones</string>
+
+    //solicitar desde el perfon del padre
+    <string name="txtCantidad">Cantidad de niños</string>
+    <string name="txtHoras">Número de horas</string>
+    <string name="txtPreciosugerido">Precio sugerido</string>
+    <string name="txtRecomendacion">Especifique si tiene alguna recomendación respecto a su hijo/a</string>
+    <string name="btnEnviar">Aceptar</string>
+
 
     //actualizar padre
-    <string name="actualizarpadre">Actualizar información</string>
-    <string name="txtTelefono3">Telefono </string>
-    <string name="txtCorreo4">Correo</string>
-    <string name="txtDireccion3">Dirección</string>
-    <string name="btnActualizarpadre">Aceptar</string>
+    <string name="txtactualizarpadre">Actualizar información</string>
+    <string name="txtcedula">Cédula</string>
+    <string name="txtcorreo">Correo</string>
+    <string name="txtdireccion">Dirección</string>
+    <string name="txttelefono">Teléfono</string>
+    <string name="txtBuscar">Buscar</string>
+    <string name="btnbuscar">Buscar</string>
+    <string name="btnActualizar">Aceptar</string>
+
 
     //reservar padre
     <string name="txtPrecio">Precio sugerido</string>
@@ -76,15 +91,22 @@
     <string name="lblInicio">Nas</string>
     <string name="lblActualizar">Actualizar información</string>
     <string name="lblCambiar">Cambiar contraseña</string>
+    <string name="lblSolicitudes">Solicitudes</string>
+    <string name="btnTrabajar">Comenzar a trabajar</string>
+    <string name="lblcalificacion">Mis calificaciones</string>
+
 
     <string name="btnActualizarninera1">Actualizar información</string>
     <string name="btnCambiarninera">Cambiar contraseña</string>
 
-    //actualizar información
-    <string name="txtTelefono4">Telefono </string>
-    <string name="txtCorreo5">Correo</string>
-    <string name="txtDireccion4">Dirección</string>
-    <string name="btnActualizarninera">Aceptar</string>
+    //actualizar niñera
+    <string name="txtactualizarpadre1">Actualizar información</string>
+    <string name="txtcedula1">Cédula</string>
+    <string name="txtcorreo1">Correo</string>
+    <string name="txtdireccion1">Dirección</string>
+    <string name="txttelefono1">Teléfono</string>
+    <string name="btnbuscar1">Buscar</string>
+    <string name="btnActualizar1">Aceptar</string>
 
     //cambiar contraseña niñera
     <string name="txtContraseña4">Contraseña actual</string>
@@ -95,10 +117,12 @@
     //admin
     <string name="lblInicio1">Nas</string>
     <string name="lblUsuarios">Usuarios registrados</string>
+    <string name="btnMostrar">Usuarios registrados</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ninera">ninera</string>
     <string name="title_activity_admin">admin</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

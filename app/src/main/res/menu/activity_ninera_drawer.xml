@@ -11,6 +11,12 @@
             android:id="@+id/nav_galery1"
             android:title="@string/menu_gallery" />
         <item
+            android:id="@+id/calificacion"
+            android:title="@string/lblcalificacion" />
+        <item
+            android:id="@+id/terminos2"
+            android:title="@string/lblterminos2" />
+        <item
             android:id="@+id/nav_slideshow"
             android:title="@string/menu_slideshow" />
     </group>

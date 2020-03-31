@@ -8,9 +8,6 @@
             android:id="@+id/nav_home2"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_galery2"
-            android:title="@string/menu_gallery" />
-        <item
             android:id="@+id/nav_slideshow"
             android:title="@string/menu_slideshow" />
     </group>

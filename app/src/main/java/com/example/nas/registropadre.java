@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 
 public class registropadre extends AppCompatActivity {
     SQLiteDatabase.CursorFactory factory;
-    String id_usuario;
 
     private EditText ed_Nombre, ed_Cedula, ed_Telefono, ed_Direccion, ed_Correo, ed_Contrasena;
 
@@ -23,22 +22,21 @@ public class registropadre extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registropadre);
 
-        ed_Nombre=(EditText)findViewById(R.id.txtNombre2);
         ed_Cedula=(EditText)findViewById(R.id.txtCedula);
+        ed_Nombre=(EditText)findViewById(R.id.txtNombre2);
         ed_Telefono=(EditText)findViewById(R.id.txtTelefono);
         ed_Direccion=(EditText)findViewById(R.id.txtDireccion);
         ed_Correo=(EditText)findViewById(R.id.txtCorreo2);
         ed_Contrasena=(EditText)findViewById(R.id.txtContraseña2);
     }
 
-    //metodo para dar de alta a los productos
     public void Registrar(View view){
         try {
             registroSQLite reg = new registroSQLite(this);
             SQLiteDatabase registroSQLite= reg.getWritableDatabase();
 
-            String Nombre=ed_Nombre.getText().toString();
             String Cedula=ed_Cedula.getText().toString();
+            String Nombre=ed_Nombre.getText().toString();
             String Telefono=ed_Telefono.getText().toString();
             String Direccion=ed_Direccion.getText().toString();
             String Correo=ed_Correo.getText().toString();
@@ -50,17 +48,17 @@ public class registropadre extends AppCompatActivity {
 
             Matcher mather = pattern.matcher(email);
 
-            if (mather.find() == true) {
                 if(!Nombre.isEmpty() && !Cedula.isEmpty() && !Telefono.isEmpty() && !Direccion.isEmpty() && !Correo.isEmpty() && !Contrasena.isEmpty() ){
-
+                    if (mather.find() == true) {
 
                     ContentValues registro=new ContentValues();
-                    registro.put("Nombre", Nombre);
                     registro.put("Cedula", Cedula);
+                    registro.put("Nombre", Nombre);
                     registro.put("Telefono", Telefono);
                     registro.put("Direccion", Direccion);
                     registro.put("Correo", Correo);
                     registro.put("Contrasena", Contrasena);
+                    registro.put("rol", "padre");
 
                     registroSQLite.insert("usuarios", null, registro);
                     registroSQLite.close();
@@ -79,16 +77,14 @@ public class registropadre extends AppCompatActivity {
                     startActivity(siguiente);
 
                 }else{
-                    String errorString = "Debe llenar todos los campos";
-                    Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+
+                        String errorString = "Debe tenero un @ un . y sin espacios";
+                        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
                 }
             } else {
-                String errorString = "Debe tenero un @ un . y sin espacios";
-                Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+                    String errorString = "Debe llenar todos los campos";
+                    Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
             }
-
-
-
         }catch (Exception e){
             System.err.print("Error"+e);
         }

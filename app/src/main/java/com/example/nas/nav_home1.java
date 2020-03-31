@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import static androidx.navigation.Navigation.findNavController;
 
 
 /**
@@ -20,7 +23,16 @@ public class nav_home1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_home1, container, false);
+        View vista = inflater.inflate(R.layout.fragment_nav_home1, container, false);
+        Button trabajar = vista.findViewById(R.id.btnTrabajar);
+
+
+        trabajar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findNavController(v).navigate(R.id.solicitudes);
+            }
+        });
+        return vista;
     }
 }

@@ -29,7 +29,7 @@ public class GalleryFragment extends Fragment {
         actualizarpadre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findNavController(v).navigate(R.id.actualizarpadreFragment);
+                findNavController(v).navigate(R.id.actualizarpadre2);
             }
         });
         cambiarpadre.setOnClickListener(new View.OnClickListener() {
@@ -38,8 +38,6 @@ public class GalleryFragment extends Fragment {
                 findNavController(v).navigate(R.id.cambiarpadreFragment);
             }
         });
-
-
         return vista;
     }
 }

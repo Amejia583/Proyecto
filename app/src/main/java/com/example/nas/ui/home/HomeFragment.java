@@ -24,7 +24,8 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View vista= inflater.inflate(R.layout.fragment_home, container, false);
         Button reservar =vista.findViewById(R.id.btnReservar);
-        Button solicitar=vista.findViewById(R.id.btnSolicitar);
+        Button solicitar =vista.findViewById(R.id.btnSolicitar);
+
 
         reservar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,10 +36,9 @@ public class HomeFragment extends Fragment {
         solicitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findNavController(v).navigate(R.id.mapaFragment);
+                findNavController(v).navigate(R.id.solicitarninera);
             }
         });
-
         return vista;
     }
 }

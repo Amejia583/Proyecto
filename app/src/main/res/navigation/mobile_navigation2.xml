@@ -10,10 +10,19 @@
         android:id="@+id/nav_home2"
         android:name="com.example.nas.nav_home2"
         android:label="@string/lblInicio1"
-        tools:layout="@layout/fragment_nav_home2" />
+        tools:layout="@layout/fragment_nav_home2" >
+        <action
+            android:id="@+id/action_nav_home2_to_mostrar"
+            app:destination="@id/mostrar" />
+    </fragment>
     <fragment
         android:id="@+id/nav_galery2"
         android:name="com.example.nas.nav_galery2"
         android:label="@string/lblUsuarios"
         tools:layout="@layout/fragment_nav_galery2" />
+    <activity
+        android:id="@+id/mostrar"
+        android:name="com.example.nas.mostrar"
+        android:label="activity_mostrar"
+        tools:layout="@layout/activity_mostrar" />
 </navigation>

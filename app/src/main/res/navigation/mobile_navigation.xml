@@ -18,8 +18,8 @@
             android:id="@+id/action_nav_home_to_reservarFragment"
             app:destination="@id/reservarFragment" />
         <action
-            android:id="@+id/action_nav_home_to_mapaFragment"
-            app:destination="@id/mapaFragment" />
+            android:id="@+id/action_nav_home_to_solicitarninera"
+            app:destination="@id/solicitarninera" />
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
@@ -41,18 +41,13 @@
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" >
         <action
-            android:id="@+id/action_nav_gallery_to_actualizarpadreFragment"
-            app:destination="@id/actualizarpadreFragment" />
-        <action
             android:id="@+id/action_nav_gallery_to_cambiarpadreFragment"
             app:destination="@id/cambiarpadreFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_actualizarpadre2"
+            app:destination="@id/actualizarpadre2" />
     </fragment>
 
-    <fragment
-        android:id="@+id/actualizarpadreFragment"
-        android:name="com.example.nas.ActualizarpadreFragment"
-        android:label="@string/actualizarpadre"
-        tools:layout="@layout/fragment_actualizarpadre" />
     <fragment
         android:id="@+id/cambiarpadreFragment"
         android:name="com.example.nas.CambiarpadreFragment"
@@ -63,9 +58,19 @@
         android:name="com.example.nas.ReservarFragment"
         android:label="@string/btnReservar"
         tools:layout="@layout/fragment_reservar" />
+    <activity
+        android:id="@+id/solicitarninera"
+        android:name="com.example.nas.solicitarninera"
+        android:label="activity_solicitarninera"
+        tools:layout="@layout/activity_solicitarninera" />
     <fragment
-        android:id="@+id/mapaFragment"
-        android:name="com.example.nas.mapaFragment"
-        android:label="@string/lblmapa"
-        tools:layout="@layout/fragment_mapa" />
+        android:id="@+id/terminos1"
+        android:name="com.example.nas.terminos1"
+        android:label="@string/lblterminos"
+        tools:layout="@layout/fragment_terminos1" />
+    <activity
+        android:id="@+id/actualizarpadre2"
+        android:name="com.example.nas.Actualizarpadre"
+        android:label="activity_actualizarpadre"
+        tools:layout="@layout/activity_actualizarpadre" />
 </navigation>

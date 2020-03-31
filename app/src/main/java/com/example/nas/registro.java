@@ -15,7 +15,7 @@ public class registro extends AppCompatActivity {
 
     //metodo boton anterior
     public void niñera(View view){
-        Intent niñera =new Intent(this, registro.class );
+        Intent niñera =new Intent(this, registroN.class );
         startActivity(niñera);
     }
     public void padre(View view){

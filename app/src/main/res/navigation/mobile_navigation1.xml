@@ -18,20 +18,35 @@
         android:label="@string/lblEditar"
         tools:layout="@layout/fragment_nav_galery1">
         <action
-            android:id="@+id/action_nav_galery1_to_actualizarnineraFragment"
-            app:destination="@id/actualizarnineraFragment" />
-        <action
             android:id="@+id/action_nav_galery1_to_cambiarnineraFragment"
             app:destination="@id/cambiarnineraFragment" />
+        <action
+            android:id="@+id/action_nav_galery1_to_actualizarninera"
+            app:destination="@id/actualizarninera" />
     </fragment>
-    <fragment
-        android:id="@+id/actualizarnineraFragment"
-        android:name="com.example.nas.actualizarnineraFragment"
-        android:label="@string/lblActualizar"
-        tools:layout="@layout/fragment_actualizarninera" />
     <fragment
         android:id="@+id/cambiarnineraFragment"
         android:name="com.example.nas.cambiarnineraFragment"
         android:label="@string/lblCambiar"
         tools:layout="@layout/fragment_cambiarninera" />
+    <fragment
+        android:id="@+id/solicitudes"
+        android:name="com.example.nas.solicitudes"
+        android:label="@string/lblSolicitudes"
+        tools:layout="@layout/fragment_solicitudes" />
+    <activity
+        android:id="@+id/calificacion"
+        android:name="com.example.nas.calificacion"
+        android:label="@string/lblcalificacion"
+        tools:layout="@layout/activity_calificacion" />
+    <fragment
+        android:id="@+id/terminos2"
+        android:name="com.example.nas.terminos2"
+        android:label="@string/lblterminos2"
+        tools:layout="@layout/fragment_terminos2" />
+    <activity
+        android:id="@+id/actualizarninera"
+        android:name="com.example.nas.Actualizarninera"
+        android:label="activity_actualizarninera"
+        tools:layout="@layout/activity_actualizarninera" />
 </navigation>

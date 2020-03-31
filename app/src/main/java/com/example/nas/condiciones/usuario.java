@@ -1,4 +1,4 @@
-package com.example.hola.condiciones;
+package com.example.nas.condiciones;
 
 public class usuario {
      Integer Cedula;
@@ -24,12 +24,15 @@ public class usuario {
     public Integer getCedula() {
         return Cedula;
     }
+
     public void setCedula(Integer cedula) {
         Cedula = cedula;
     }
+
     public String getNombre() {
         return Nombre;
     }
+
     public void setNombre(String nombre) {
         Nombre = nombre;
     }
